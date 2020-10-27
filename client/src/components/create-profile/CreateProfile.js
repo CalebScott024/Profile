@@ -17,18 +17,18 @@ class CreateProfile extends Component {
       displaySocialInputs: false,
       handle: "",
       imgUrl: "",
-      company: "",
-      website: "",
-      location: "",
-      status: "",
-      skills: "",
-      githubusername: "",
+      //company: "",
+      //website: "",
+      // location: "",
+      // status: "",
+      // skills: "",
+      // githubusername: "",
       bio: "",
-      twitter: "",
-      facebook: "",
-      linkedin: "",
-      youtube: "",
-      instagram: "",
+      // twitter: "",
+      // facebook: "",
+      // linkedin: "",
+      // youtube: "",
+      // instagram: "",
       errors: {}
     };
 
@@ -49,18 +49,18 @@ class CreateProfile extends Component {
     const profileData = {
       handle: this.state.handle,
       imgUrl: this.state.imgUrl,
-      company: this.state.company,
-      website: this.state.website,
-      location: this.state.location,
-      status: this.state.status,
-      skills: this.state.skills,
-      githubusername: this.state.githubusername,
+      //company: this.state.company,
+     // website: this.state.website,
+      //location: this.state.location,
+      //status: this.state.status,
+      //skills: this.state.skills,
+      //githubusername: this.state.githubusername,
       bio: this.state.bio,
-      twitter: this.state.twitter,
-      facebook: this.state.facebook,
-      linkedin: this.state.linkedin,
-      youtube: this.state.youtube,
-      instagram: this.state.instagram
+      //twitter: this.state.twitter,
+      //facebook: this.state.facebook,
+      //linkedin: this.state.linkedin,
+      //youtube: this.state.youtube,
+      //instagram: this.state.instagram
     };
     this.props.createProfile(profileData, this.props.history);
   }
@@ -70,69 +70,69 @@ class CreateProfile extends Component {
   render() {
     const { errors, displaySocialInputs } = this.state;
 
-    let socialInputs;
+    // let socialInputs;
 
-    if (displaySocialInputs) {
-      socialInputs = (
-        <div>
-          <InputGroup
-            placeholder="Twitter Profile URL"
-            name="twitter"
-            icon="fab fa-twitter"
-            value={this.state.twitter}
-            onChange={this.onChange}
-            errors={errors.twitter}
-          />
-          <InputGroup
-            placeholder="LinkedIn Profile URL"
-            name="linkedin"
-            icon="fab fa-linkedin"
-            value={this.state.linkedin}
-            onChange={this.onChange}
-            errors={errors.linkedin}
-          />
-          <InputGroup
-            placeholder="Facebook Profile URL"
-            name="facebook"
-            icon="fab fa-facebook"
-            value={this.state.facebook}
-            onChange={this.onChange}
-            errors={errors.facebook}
-          />
-          <InputGroup
-            placeholder="YouTube Channel URL"
-            name="youtube"
-            icon="fab fa-youtube"
-            value={this.state.youtube}
-            onChange={this.onChange}
-            errors={errors.youtube}
-          />
-          <InputGroup
-            placeholder="Instagram Handle"
-            name="instagram"
-            icon="fab fa-instagram"
-            value={this.state.instagram}
-            onChange={this.onChange}
-            errors={errors.instagram}
-          />
-        </div>
-      );
-    }
+    // if (displaySocialInputs) {
+    //   socialInputs = (
+    //     <div>
+    //       <InputGroup
+    //         placeholder="Twitter Profile URL"
+    //         name="twitter"
+    //         icon="fab fa-twitter"
+    //         value={this.state.twitter}
+    //         onChange={this.onChange}
+    //         errors={errors.twitter}
+    //       />
+    //       <InputGroup
+    //         placeholder="LinkedIn Profile URL"
+    //         name="linkedin"
+    //         icon="fab fa-linkedin"
+    //         value={this.state.linkedin}
+    //         onChange={this.onChange}
+    //         errors={errors.linkedin}
+    //       />
+    //       <InputGroup
+    //         placeholder="Facebook Profile URL"
+    //         name="facebook"
+    //         icon="fab fa-facebook"
+    //         value={this.state.facebook}
+    //         onChange={this.onChange}
+    //         errors={errors.facebook}
+    //       />
+    //       <InputGroup
+    //         placeholder="YouTube Channel URL"
+    //         name="youtube"
+    //         icon="fab fa-youtube"
+    //         value={this.state.youtube}
+    //         onChange={this.onChange}
+    //         errors={errors.youtube}
+    //       />
+    //       <InputGroup
+    //         placeholder="Instagram Handle"
+    //         name="instagram"
+    //         icon="fab fa-instagram"
+    //         value={this.state.instagram}
+    //         onChange={this.onChange}
+    //         errors={errors.instagram}
+    //       />
+    //     </div>
+    //   );
+    // }
 
-    const options = [
-      {
-        label: "* Select Professional Status",
-        value: 0
-      },
-      { label: "Developer", value: "Developer" },
-      { label: "Junior Developer", value: "Junior Developer" },
-      { label: "Senior Developer", value: "Senior Developer" },
-      { label: "Manager", value: "Manager" },
-      { label: "Student", value: "Student" },
-      { label: "Instructor", value: "Instructor" },
-      { label: "Intern", value: "Intern" },
-      { label: "Other", value: "Other" }
-    ];
+    // const options = [
+    //   {
+    //     label: "* Select Professional Status",
+    //     value: 0
+    //   },
+    //   { label: "Developer", value: "Developer" },
+    //   { label: "Junior Developer", value: "Junior Developer" },
+    //   { label: "Senior Developer", value: "Senior Developer" },
+    //   { label: "Manager", value: "Manager" },
+    //   { label: "Student", value: "Student" },
+    //   { label: "Instructor", value: "Instructor" },
+    //   { label: "Intern", value: "Intern" },
+    //   { label: "Other", value: "Other" }
+    // ];
 
     return (
       <div className="create-profile">
