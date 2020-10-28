@@ -73,7 +73,7 @@ class Navbar extends Component {
             data-toggle="collapse"
             data-target="#mobile-nav"
           >
-            <span className="navbar-toggler-icon" />
+            <span className="navbar-toggler-icon" style={{color:"white", textAlign:"center", alignItems:"center"}}>≡</span>
           </button>
 
           <div className="collapse navbar-collapse" id="mobile-nav">

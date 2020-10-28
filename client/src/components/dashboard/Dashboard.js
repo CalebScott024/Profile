@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { getCurrentProfile, deleteAccount } from "../../actions/profileActions";
 import ProfileActions from "./ProfileActions";
+import ProfileHeader from "../profile/ProfileHeader";
+
+import ProfileAbout from "../profile/ProfileAbout";
 //import Experience from "./Experience";
 //import Education from "./Education";
 
@@ -29,21 +32,11 @@ class Dashboard extends Component {
       if (Object.keys(profile).length > 0) {
         dashboardContent = (
           <div>
-            <p className="lead text-muted">
-              Welcome{"    "}
-              <Link
-                to={`/profile/${profile.handle}`}
-                style={{ fontWeight: "bold", fontSize: 22 }}
-              >
-                {user.name}
-              </Link>
-            </p>
-
+            
+            <ProfileHeader profile={profile} />
+            <ProfileAbout profile={profile} />
+           {/* // {console.log(profile)} */}
             <ProfileActions />
-
-            {/* <Experience experience={profile.experience} /> */}
-            {/* <Education education={profile.education} /> */}
-
             <div style={{ marginBottom: "60px" }} />
             <button
               onClick={this.onDeleteClick.bind(this)}

@@ -12,7 +12,7 @@ class Register extends Component {
   constructor() {
     super();
     this.state = {
-      name: "",
+    //  name: "",
       email: "",
       password: "",
       password2: "",
@@ -40,12 +40,12 @@ class Register extends Component {
   onSubmit(e) {
     e.preventDefault();
     const newUser = {
-      name: this.state.name,
+     // name: this.state.name,
       email: this.state.email,
       password: this.state.password,
       password2: this.state.password2
     };
-
+    console.log(newUser);
     this.props.registerUser(newUser, this.props.history);
   }
   render() {
@@ -59,13 +59,13 @@ class Register extends Component {
               <h1 className="display-4 text-center">Sign Up</h1>
               <p className="lead text-center">Create your Rima account</p>
               <form noValidate onSubmit={this.onSubmit}>
-                <TextFieldGroup
+                {/* <TextFieldGroup
                   placeholder="Name"
                   name="name"
                   value={this.state.name}
                   onChange={this.onChange}
                   error={errors.name}
-                />
+                /> */}
 
                 <TextFieldGroup
                   placeholder="Email"

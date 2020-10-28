@@ -6,8 +6,7 @@ import { Link } from "react-router-dom";
 import { getProfileByHandle } from "../../actions/profileActions";
 import Spinner from "../common/Spinner";
 import ProfileHeader from "./ProfileHeader";
-import ProfileCreds from "./ProfileCreds";
-import ProfileGithub from "./ProfileGithub";
+
 import ProfileAbout from "./ProfileAbout";
 
 class Profile extends Component {
@@ -41,13 +40,7 @@ class Profile extends Component {
           </div>
           <ProfileHeader profile={profile} />
           <ProfileAbout profile={profile} />
-          <ProfileCreds
-            experience={profile.experience}
-            education={profile.education}
-          />
-          {profile.githubusername ? (
-            <ProfileGithub username={profile.githubusername} />
-          ) : null}
+          
         </div>
       );
     }

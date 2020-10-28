@@ -19,10 +19,8 @@ class EditProfile extends Component {
     this.state = {
       displaySocialInputs: false,
       handle: "",
-      imgUrl: "",
-    
-      bio: "",
- 
+      imgUrl: "",    
+      bio: "", 
       errors: {}
     };
 
@@ -40,19 +38,15 @@ class EditProfile extends Component {
       });
     }
     if (nextProps.profile.profile) {
-      const profile = nextProps.profile.profile;
-
-      
+      const profile = nextProps.profile.profile;      
       profile.bio = !isEmpty(profile.bio) ? profile.bio : "";
      
 
       // set component fields state
       this.setState({
         handle: profile.handle,
-        imgUrl: profile.imgUrl,
-       
-        bio: profile.bio,
-        
+        imgUrl: profile.imgUrl,       
+        bio: profile.bio,        
       });
     }
   }
@@ -61,11 +55,11 @@ class EditProfile extends Component {
 
     const profileData = {
       handle: this.state.handle,
-      imgUrl: this.state.imgUrl,
-      
+      imgUrl: this.state.imgUrl,      
       bio: this.state.bio,
      
     };
+    console.log(profileData);
     this.props.createProfile(profileData, this.props.history);
   }
   onChange(e) {
@@ -102,7 +96,7 @@ class EditProfile extends Component {
                 />
                
                 <TextAreaFieldGroup
-                  placeholder="Short Bio"
+                  placeholder="Description"
                   name="bio"
                   value={this.state.bio}
                   onChange={this.onChange}
