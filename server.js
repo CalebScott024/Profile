@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
@@ -21,7 +22,7 @@ const database = require("./config/keys").mongoURI;
 
 // connect to database
 mongoose
-  .connect(database)
+  .connect(database, {useNewUrlParser: true, useUnifiedTopology: true})
   .then(() => console.log("connected to MongoDB"))
   .catch(err => console.log("db connection error"));
 

@@ -1,4 +1,5 @@
 module.exports = {
-  mongoURI: 'mongodb://localhost:27017/mern_test_db',
-  secretKey: 'secret'
+  mongoURI: process.env.PROD_MONGO_URI,
+  secretKey: process.env.SECRET_KEY
 };
+
