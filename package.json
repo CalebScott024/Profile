@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ChristianGracia/MERN-STACK-SOCIAL-NETWORK-SITE.git"
+    "url": "git+https://github.com/rima0204/Profile.git"
   },
   "author": "Christian Gracia",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ChristianGracia/MERN-STACK-SOCIAL-NETWORK-SITE/issues"
+    "url": "https://github.com/rima0204/Profile/issues"
   },
-  "homepage": "https://github.com/ChristianGracia/MERN-STACK-SOCIAL-NETWORK-SITE#readme",
+  "homepage": "https://github.com/rima0204/Profile#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
