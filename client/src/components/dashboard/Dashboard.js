@@ -65,9 +65,9 @@ class Dashboard extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-              <h1 className="display-4" style={{ fontWeight: "bold" }}>
+              <p className="display-4" style={{ fontWeight: "bold" }}>
                 Dashboard
-              </h1>
+              </p>
               {dashboardContent}
             </div>
           </div>
