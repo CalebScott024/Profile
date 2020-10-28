@@ -59,7 +59,7 @@ class EditProfile extends Component {
       bio: this.state.bio,
      
     };
-    console.log(profileData);
+    
     this.props.createProfile(profileData, this.props.history);
   }
   onChange(e) {

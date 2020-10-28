@@ -7,7 +7,7 @@ class ProfileAbout extends Component {
   render() {
     const { profile } = this.props;
 
-    const firstName = profile.user.name.trim().split(" ")[0];
+    const firstName = profile.handle.trim().split(" ")[0];
 
   
     return (
